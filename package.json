@@ -1,0 +1,13 @@
+{
+  "name": "app-link",
+  "version": "1.0.0",
+  "description": "Test app for app-link redirect",
+  "main": "app.js",
+  "author": "Michael Carniato",
+  "license": "MIT",
+  "dependencies": {
+    "applink": "^0.1.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
+}

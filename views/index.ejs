@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="/js/applink-master/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1>Hello!</h1>
+    <script type="text/javascript">
+    var twitter = new AppLink()
+
+    $(document).ready(() => {
+      twitter.open({
+          error: function () {
+              window.open(encodeURI("https://twitter.com/intent/tweet?text=Look at this awesome thing"), "_blank", "toolbar=0,personalbar=0,resizable,scrollbars,status,width=550,height=450,top=" + Math.round((screen.height - 450)/2) + ",left=" + Math.round((screen.width - 550)/2))
+          },
+          success: function () {},
+          nativeURL: encodeURI("twitter://post?message=Look at this awesome thing")
+      });
+    });
+    </script>
+  </body>
+</html>
